@@ -20,9 +20,9 @@ module.exports = {
 
         // check if error when  validate email, and password
         if (isLoggedIn.error) {
-            return res.json({
+            return res.status(403).json({
                 message: isLoggedIn.message,
-                status: 500,
+                status: 403,
                 data: {},
                 errors: true
             })
